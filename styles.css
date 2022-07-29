@@ -1,0 +1,51 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face{
+    font-family: "digital-clock";
+    src: url(/fonts/digital-7.ttf)
+}
+
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN */
+
+.clock{
+    font-size: 70px;
+    font-family: "digital-clock", sans-serif;
+}
+
+/* FOOTER */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+img{
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
