@@ -48,22 +48,53 @@ a{
 /* MAIN */
 
 .analog-clock{
+    position: relative;
     width: 400px;
     height: 400px;
-    position: relative;
     border-radius: 50%;
     outline: 2px solid white;
 }
 
 .center{
-    width: 10px;
-    height: 10px;
     position: absolute;
     top: 195px;
     left: 195px;
-    background-color: white;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
+    background-color: white;
+}
 
+.hour{
+    position: absolute;
+    top: 195px;
+    left: 199px;
+    width: 2px;
+    height: 100px;
+    background-color: blue;
+    transform-origin: top center;
+}
+
+.minute{
+    position: absolute;
+    top: 195px;
+    left: 199px;
+    width: 2px;
+    height: 120px;
+    background-color: red;
+    transform-origin: top center;
+    transform: rotate(90deg); 
+}
+
+.second{
+    position: absolute;
+    top: 195px;
+    left: 199px;
+    width: 2px;
+    height: 160px;
+    background-color: yellow;
+    transform-origin: top center;
+    transform: rotate(-90deg);
 }
 
 /* FOOTER */
