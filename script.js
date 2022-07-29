@@ -13,7 +13,7 @@ function initializeTime(){
 function updateTime(){
 
     if(second.textContent === "59"){
-        second.textContent = 00;
+        second.textContent = "00";
         addOne(minute);
     }
 
@@ -22,14 +22,15 @@ function updateTime(){
     }
 
     if(minute.textContent === "59"){
-        minute.textContent = 00;
+        minute.textContent = "00";
         addOne(hour);
     }
 
 }
 
 function addOne(time){
-    time.textContent = Number(time.textContent) + 1;
+    time.textContent = (Number(time.textContent) + 1).toString()
+                                                    .padStart(2, "0");
 }
 
 window.onload = () => {
