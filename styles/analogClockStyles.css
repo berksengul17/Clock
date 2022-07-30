@@ -57,7 +57,7 @@ a{
 
 .center{
     position: absolute;
-    top: 195px;
+    top: 190px;
     left: 195px;
     width: 10px;
     height: 10px;
@@ -71,8 +71,8 @@ a{
     left: 199px;
     width: 2px;
     height: 100px;
-    background-color: blue;
     transform-origin: top center;
+    background-color: white;
 }
 
 .minute{
@@ -81,9 +81,9 @@ a{
     left: 199px;
     width: 2px;
     height: 120px;
-    background-color: red;
     transform-origin: top center;
     transform: rotate(90deg); 
+    background-color: white;
 }
 
 .second{
@@ -92,7 +92,7 @@ a{
     left: 199px;
     width: 2px;
     height: 160px;
-    background-color: yellow;
+    background-color: red;
     transform-origin: top center;
     transform: rotate(-90deg);
 }
