@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @font-face{
-    font-family: "digital-clock";
+    font-family: "clock";
     src: url(/fonts/digital-7.ttf)
 }
 
@@ -49,7 +49,7 @@ a{
 
 .digital-clock{
     font-size: 100px;
-    font-family: "digital-clock", sans-serif;
+    font-family: "clock", sans-serif;
 }
 
 /* FOOTER */
