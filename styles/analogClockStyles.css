@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @font-face{
-    font-family: "digital-clock";
+    font-family: "clock";
     src: url(/fonts/digital-7.ttf)
 }
 
@@ -19,6 +19,7 @@
     width: 100vw;
     height: 100vh;
     
+    font-family: "clock", sans-serif;
     background-color: black;
     color: white;
 
@@ -50,7 +51,7 @@ a{
 .analog-clock{
     position: relative;
     border-radius: 50%;
-    outline: 2px solid white;
+    outline: 4px solid white;
 }
 
 .center{
@@ -93,7 +94,8 @@ a{
 .analog-clock span{
     position: absolute;
     transform-origin: top left;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* FOOTER */
