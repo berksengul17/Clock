@@ -1,18 +1,18 @@
-const HOUR_DELTA_ANGLE = 30;
-const MINUTE_DELTA_ANGLE = 6;
-
 const hourHand = document.querySelector(".hour.hand");
 const minuteHand = document.querySelector(".minute.hand");
 const secondHand = document.querySelector(".second.hand");
 
-function initializeClock(){
+function updateClock(){
     const currentDate = new Date();
     const hour = formatAMPM(currentDate.getHours());
     const minute = currentDate.getMinutes();
     const second = currentDate.getSeconds();
 
-    hourHand.style.transform = `rotate(${hour * HOUR_DELTA_ANGLE}deg)`;
-    minuteHand.style.transform = `rotate(${minute * MINUTE_DELTA_ANGLE}deg)`;
+    hourHand.style.transform = `rotate(${(hour / 12) * 360}deg)`;
+    minuteHand.style.transform = `rotate(${(minute / 60) * 360}deg)`;
+    secondHand.style.transform = `rotate(${(second / 60) * 360}deg)`;
+    
+    requestAnimationFrame(updateClock);
 }
 
 function formatAMPM(hour){
@@ -22,5 +22,5 @@ function formatAMPM(hour){
 }
 
 window.onload = () => {
-    initializeClock();
+    requestAnimationFrame(updateClock);
 }
