@@ -3,18 +3,23 @@ const degreeToRadian = angle => {
 }
 
 const pointOnCircle = (radius, angle = 0) => {
+    // move y a little higher to align with clock face
+    const Y_OFFSET = 15;
     const xPos = radius * Math.cos(degreeToRadian(angle));
-    const yPos = radius * Math.sin(degreeToRadian(angle));
+    const yPos = radius * Math.sin(degreeToRadian(angle)) - Y_OFFSET;
     return {
         x: xPos,
         y: yPos
     }
 }
 
-const RADIUS = 200;
+const RADIUS = 170;
 const DIAMETER = RADIUS * 2;
 
-const circle = document.querySelector(".analog-clock");
+const mainContainer = document.querySelector(".analog-clock");
+const circle = document.createElement("div");
+mainContainer.appendChild(circle);
+circle.classList.add("numberContainer");
 circle.style.width = `${DIAMETER}px`;
 circle.style.height = `${DIAMETER}px`;
 
@@ -43,7 +48,7 @@ numberArray.forEach((number, index) => {
     const translate = `translate(${xPos}px, ${yPos}px)`;
     const rotate = `rotate(${index * deltaAngle}deg)`;
 
-    numberElement.style.transform = `${translate} ${rotate}`;
+    numberElement.style.transform = `${translate}`;
 
     currentAngle += deltaAngle;
 
