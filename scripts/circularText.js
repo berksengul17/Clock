@@ -46,7 +46,6 @@ numberArray.forEach((number, index) => {
     yPos += RADIUS;
 
     const translate = `translate(${xPos}px, ${yPos}px)`;
-    const rotate = `rotate(${index * deltaAngle}deg)`;
 
     numberElement.style.transform = `${translate}`;
 
