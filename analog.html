@@ -14,7 +14,18 @@
     </div>
     
     <main class="analog-clock">
-        <div class="numbers">12 1 2 3 4 5 6 7 8 9 10 11</div>
+        <svg class="clockface" width="400" height="400"
+        viewBox="-200 -200 400 400">
+            <circle cx="0" cy="0" r="198" fill="transparent"
+            stroke="white" stroke-width="5" stroke-dasharray=".1 .9"
+            stroke-dashoffset=".05"
+            pathlength="60" />
+            <circle cx="0" cy="0" r="195" fill="transparent"
+            stroke="white" stroke-width="10"
+            pathlength="12" stroke-dasharray=".1 .9"
+            stroke-dashoffset=".05"/>
+        </svg>
+        <!-- <div class="numbers">12 1 2 3 4 5 6 7 8 9 10 11</div> -->
         <div class="hour hand"></div>
         <div class="minute hand"></div>
         <div class="second hand"></div>
